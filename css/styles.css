@@ -7,9 +7,7 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-html{
-    scroll-behavior: smooth;
-}
+
 
 /* ---- Base Rules ---- */
 body {
@@ -69,17 +67,15 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: center;
+    text-align: right;
 }
 
 .navbar__menu li {
     display: inline-block;
-    padding: 20px 50px;
-    color: #fff;
 }
 
 .navbar__menu .menu__link {
-    display: inline-block;
+    display: block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -87,46 +83,19 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-    background: rgba(136,203,171,1);
+    background: #333;
     color: #fff;
     transition: ease 0.3s all;
 }
 
 /* Header Styles */
 .page__header {
-    background: #000;
+    background: #fff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
-    color:#fff
 }
-
-#back-to-top-button {
-    font-weight: bold;
-    position:fixed;
-    font-size: 24px;
-    text-align: center;
-    bottom: 10%;
-    right: 2%;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    outline: none;
-    border: 3px solid #333;
-    border-radius: 100%;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-    transition-property: background-color, color;
-}
-
-#back-to-top-button:hover, #back-to-top-button:focus {
-    background-color: #333;
-    color: #fff
-}
-
 
 /* Footer Styles */
 .page__footer {
@@ -252,3 +221,30 @@ section.your-active-class .landing__container::after {
         rotate(-360deg);
     }
 }
+
+#myBtn {
+    display: none; 
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    bottom: 10%; 
+    right: 1%; 
+    border-color: #000;
+    background-color: #fff; 
+    cursor: pointer; 
+    border-radius: 50%; 
+    font-size: 27px; 
+  }
+  
+  #myBtn:hover {
+    background-color: #000; 
+    color:#fff
+  }
+
+  @media only screen and (max-width: 550px){
+    #myBtn {
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 15px; 
+      }
+  }
