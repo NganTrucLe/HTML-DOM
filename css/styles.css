@@ -8,7 +8,9 @@
  *
 */
 
-
+* {
+    scroll-behavior: smooth;
+}
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
@@ -70,8 +72,41 @@ section {
     text-align: right;
 }
 
+.burger div {
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    display: none;
+}
+
 .navbar__menu li {
     display: inline-block;
+    font-size: 25px;
+    margin-right: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar__menu a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight:  bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: black;
+}
+
+.navbar__menu a:hover {
+    background-color: brown;
+}
+
+li.active {
+    background-color: red;
+    transition: 0.3 ease backgroung-color;
+}
+
+.active a{
+    color: white;
 }
 
 .navbar__menu .menu__link {
@@ -88,6 +123,27 @@ section {
     transition: ease 0.3s all;
 }
 
+.float.active{
+	position:fixed;
+	width: fit-content;
+	height: fit-content;
+	bottom:40px;
+	right:40px;
+	background-color :white ;
+	color:#FFF;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.float i {
+    text-decoration: none;
+    margin-top:20px ;
+    color: black;
+    font-size: 20px;
+}
+.my-float{
+	margin-top:22px
+}
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -221,3 +277,4 @@ section.your-active-class .landing__container::after {
         rotate(-360deg);
     }
 }
+
