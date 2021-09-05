@@ -7,7 +7,9 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
+*{
+    scroll-behavior: smooth;
+}
 
 /* ---- Base Rules ---- */
 body {
@@ -67,13 +69,21 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px,1fr));
 }
-
-.navbar__menu li {
-    display: inline-block;
+@media screen and (min-width: 400px) {
+    .navbar__menu ul {
+        text-align: right;
+        font-size: 1em;
+        display: block;
+    }
+    .navbar__menu li {
+        display: inline-block;
+    }
 }
-
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
@@ -87,7 +97,27 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+#btn {
+    position: fixed;
+    width: 30px; 
+    height: 40px;
+    padding: 0;
+    font-size: 0.8em;
+    font-weight: 600;
+    top: 250px;
+    left: 0;
+    color: black;
+    background-color: rgb(220,216,0);
+    z-index: 1;
+    display: none;
+}
+@media screen and (min-width: 35em) {
+    #btn {
+        width: 70px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+}
 /* Header Styles */
 .page__header {
     background: #fff;
