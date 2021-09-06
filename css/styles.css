@@ -17,8 +17,6 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
-
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -68,10 +66,16 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
 }
-
 .navbar__menu li {
     display: inline-block;
+    color:#000;
+    height:20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding:10px 20px 10px 20px;
 }
 
 .navbar__menu .menu__link {
@@ -83,7 +87,7 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-    background: #333;
+    background: red;
     color: #fff;
     transition: ease 0.3s all;
 }
@@ -91,10 +95,14 @@ section {
 /* Header Styles */
 .page__header {
     background: #fff;
+    border:1px solid white;
     position: fixed;
     top: 0;
+    height:65px;
     width: 100%;
     z-index: 5;
+    display: flex;
+    align-items: center;
 }
 
 /* Footer Styles */
@@ -107,8 +115,26 @@ section {
 .page__footer p{
     color: #fff;
 }
-
-
+.scrollTop {
+    background: none;
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    height:65px;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+.scrollTop_button {
+    height:100px;
+    padding:20px;
+}
+#paint {
+    background: black;
+    color: white;
+}
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
